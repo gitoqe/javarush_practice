@@ -10,7 +10,12 @@ public class Solution_0605 {
     // Реализовать метод reverseArray(). Он должен менять порядок элементов массива на обратный.
     // Метод должен работать только с массивами целочисленных значений (int[]).
     public static void reverseArray(int[] array) {
-
+        int temp;
+        for (int i = 0; i < array.length / 2; i++){
+            temp = array[array.length - i - 1];
+            array[array.length - i - 1] = array[i];
+            array[i] = temp;
+        }
     }
 
     public static void printArray(int[] array) {
